@@ -1,0 +1,21 @@
+사쿠라대전 1 (드림캐스트) 한글패치 v0.8
+=====================================================
+@2026  한글화 by 케도리
+
+원본 MD5 
+
+CD1 - CB24F0D92DAFD297FD1F892C9286012C
+CD2 - A7B6105B833CD6BF22390FC554D6FFE1
+
+[간편 적용 - CHD]
+1) 원본 디스크 .chd 파일과 이 폴더의 파일을 같은 폴더에 둡니다.
+   파일 이름에 Disc 1 / Disc 2 (또는 disc1, (1) 등)가 들어 있어야 디스크가 자동 구분됩니다.
+2) Windows: patch.bat 더블클릭 / Linux·Mac: ./patch.sh  (chdman, xdelta3 필요: apt install mame-tools xdelta3)
+3) "원본이름_KO.chd"가 만들어집니다. 임시 파일은 자동 삭제됩니다 (작업 중 약 2.5GB 여유 공간 필요).
+수동 적용(GDI): xdelta3 -d -s 원본track03.bin SakuraTaisen1_DC_KO_DiscN_track03.xdelta 새track03.bin
+결과 확인: md5.txt (out/discN/track03.bin 값이 패치 후 track03 MD5)
+
+
+[동봉 도구 라이선스]
+chdman.exe: MAME 0.289 (GPL-2.0+/BSD-3, LICENSE_chdman_MAME.txt, 소스 https://github.com/mamedev/mame)
+xdelta3.exe: xdelta 3.1.0 (GPL-2.0, LICENSE_xdelta3.txt, 소스 https://github.com/jmacd/xdelta-gpl)
